@@ -29,6 +29,3 @@ add_theme_support( 'custom-background' );
 
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
-
-//* Aggiungo la pagina d'esempio per i componenti
-include_once( get_stylesheet_directory() . '/inc/theme-customizer-demo.php' );
