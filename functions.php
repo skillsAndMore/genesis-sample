@@ -27,5 +27,29 @@ add_theme_support( 'genesis-responsive-viewport' );
 //* Add support for custom background
 add_theme_support( 'custom-background' );
 
+//* Aggiungo le mie Personalizzazioni
+function am_reg_impostazioni( $wp_customize ) {
+    $wp_customize->add_section( 'custom_css', array(
+      'title' => __( 'CSS Editor' ),
+      'description' => __( 'Aggiungi le tue regole CSS.' ),
+      'priority' => 160,
+    ));
+
+    $wp_customize->add_setting( 'font_size', array(
+      'default' => __( '16' ),
+    ));
+
+    $wp_customize->add_control( 'font_size', array(
+      'label' => __( 'Imposta la grandezza del carattere.' ),
+      'section' => 'custom_css',
+      'type' => 'number',
+        'input_attrs' => array( //Utile per impostare dei limiti
+        'min' => 12,
+        'max' => 36
+      ),
+    ));
+}
+add_action( 'customize_register', 'am_reg_impostazioni' );
+
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
