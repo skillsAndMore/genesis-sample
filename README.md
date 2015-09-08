@@ -1,16 +1,23 @@
+# Modifica di Genesis Sample Theme con inclusione controlli personalizzati
+
+Link articolo:
+
+Nell'articolo appena collegato abbiamo descritto come sia possibile aggiungere dei controlli personalizzati all'interno delle [Theme Customizer API](http://wpandmore.info/personalizzare-tema-customizer/) di WordPress che ci permettono di offrire dei controlli di personalizzazione del tema ai nostri utenti.
+
+## Istruzioni per l'installazione
+
+Nell'articolo collegato precedentemente troverai tutte le istruzioni ma se vuoi subito *sporcarti le mani* puoi seguire i seguenti passaggi:
+
+1. Clona questo repository, o estrai il contenuto dello zip, all'interno della cartella `wp-content/themes/`
+2. Vai nella bacheca WordPress e seleziona Aspetto
+3. Attiva il Genesis Sample Control.
+4. Controlla con *Aspetto -> Personalizza* i nuovi comandi che abbiamo discusso nell'articolo.
+
+
 # Genesis Sample Theme
 
 Github project link: https://github.com/copyblogger/genesis-sample
 
+## Ottieni Genesis
 
-## Installation Instructions
-
-1. Upload the Genesis Sample theme folder via FTP to your wp-content/themes/ directory. (The Genesis parent theme needs to be in the wp-content/themes/ directory as well.)
-2. Go to your WordPress dashboard and select Appearance.
-3. Activate the Genesis Sample theme.
-4. Inside your WordPress dashboard, go to Genesis > Theme Settings and configure them to your liking.
-
-
-## Theme Support
-
-Please visit http://my.studiopress.com/help/ for theme support.
+Su [wpAndMore](http://wpandmore.info/tag/genesis/) abbiamo discusso molto l'utilità di questo framework e se desideri acquistarlo puoi farlo direttamente da [qui](http://skillsandmore.org/genesis/). Con il tuo acquisto otterremo una piccola affiliazione che ci aiuta a mantenere il network AndMore.
