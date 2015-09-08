@@ -1,4 +1,4 @@
-# Modifica di Genesis Sample Theme con inclusione controlli personalizzati
+# Modifica di Genesis Sample Theme con inclusione Controlli Personalizzati
 
 Link articolo:
 
