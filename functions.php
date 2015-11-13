@@ -39,14 +39,29 @@ function breadcrumb_add_gfont( $wp_customize ){
 	require_once dirname(__FILE__) . '/inc/theme-customizer/select/google-font-dropdown-custom-control.php';
 	$wp_customize->add_setting( 'google_font_setting', array(
 			'default'        => 'Roboto',
-	) );
+	));
 	$wp_customize->add_control( new Google_Font_Dropdown_Custom_Control( $wp_customize, 'google_font_setting', array(
 			'label'   => 'Google Font Setting',
 			'section' => 'genesis_breadcrumbs',
 			'settings'   => 'google_font_setting',
 			'type' => 'select',
 			'priority' => 1
-	) ) );
+	)));
+
+	$wp_customize->add_setting( 'font_size', array(
+    'default' => __( '16' ),
+  ));
+
+  $wp_customize->add_control( 'font_size', array(
+    'label' => __( 'Imposta la grandezza del carattere.' ),
+    'section' => 'genesis_breadcrumbs',
+    'type' => 'number',
+      'input_attrs' => array( //Utile per impostare dei limiti
+      'min' => 12,
+      'max' => 36
+    ),
+		'priority' => 1
+  ));
 }
 
 //* Aggiungo il Font Google per le Breadcrumb
@@ -54,7 +69,10 @@ function am_inserisco_css()
 {
 	?>
 		<style type="text/css">
-			.breadcrumb { font-family: <?php echo get_theme_mod('google_font_setting', 'Arial'); ?>; }
+			.breadcrumb {
+				font-family: <?php echo get_theme_mod('google_font_setting', 'Arial'); ?>;
+				font-size: <?php echo get_theme_mod('font_size', '14') . 'px'; ?>;
+			}
 		</style>
 	<?php
 }
