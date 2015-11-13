@@ -33,15 +33,15 @@ add_theme_support( 'genesis-footer-widgets', 3 );
 include_once('inc/theme-customizer/theme-customizer-demo.php');
 
 //* Inserisco modifiche breadcrumb
-add_action('customize_register', 'breadcrumb_add_gfont' );
+add_action('customize_register', 'am_breadcrumb_edit' );
 
-function breadcrumb_add_gfont( $wp_customize ){
+function am_breadcrumb_edit( $wp_customize ){
 	require_once dirname(__FILE__) . '/inc/theme-customizer/select/google-font-dropdown-custom-control.php';
 	$wp_customize->add_setting( 'google_font_setting', array(
 			'default'        => 'Roboto',
 	));
 	$wp_customize->add_control( new Google_Font_Dropdown_Custom_Control( $wp_customize, 'google_font_setting', array(
-			'label'   => 'Google Font Setting',
+			'label'   => 'Seleziona il font da Google',
 			'section' => 'genesis_breadcrumbs',
 			'settings'   => 'google_font_setting',
 			'type' => 'select',
