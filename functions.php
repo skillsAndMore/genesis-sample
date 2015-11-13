@@ -31,3 +31,31 @@ add_theme_support( 'custom-background' );
 add_theme_support( 'genesis-footer-widgets', 3 );
 
 include_once('inc/theme-customizer/theme-customizer-demo.php');
+
+//* Inserisco modifiche breadcrumb
+add_action('customize_register', 'breadcrumb_add_gfont' );
+
+function breadcrumb_add_gfont( $wp_customize ){
+	require_once dirname(__FILE__) . '/inc/theme-customizer/select/google-font-dropdown-custom-control.php';
+	$wp_customize->add_setting( 'google_font_setting', array(
+			'default'        => 'Roboto',
+	) );
+	$wp_customize->add_control( new Google_Font_Dropdown_Custom_Control( $wp_customize, 'google_font_setting', array(
+			'label'   => 'Google Font Setting',
+			'section' => 'genesis_breadcrumbs',
+			'settings'   => 'google_font_setting',
+			'type' => 'select',
+			'priority' => 1
+	) ) );
+}
+
+//* Aggiungo il Font Google per le Breadcrumb
+function am_inserisco_css()
+{
+	?>
+		<style type="text/css">
+			.breadcrumb { font-family: <?php echo get_theme_mod('google_font_setting', 'Arial'); ?>; }
+		</style>
+	<?php
+}
+add_action( 'wp_head', 'am_inserisco_css');
