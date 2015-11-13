@@ -30,8 +30,6 @@ add_theme_support( 'custom-background' );
 //* Add support for 3-column footer widgets
 add_theme_support( 'genesis-footer-widgets', 3 );
 
-include_once('inc/theme-customizer/theme-customizer-demo.php');
-
 //* Inserisco modifiche breadcrumb
 add_action('customize_register', 'am_breadcrumb_edit' );
 
