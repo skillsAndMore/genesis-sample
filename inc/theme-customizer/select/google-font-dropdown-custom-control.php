@@ -32,7 +32,7 @@ if ( ! class_exists( 'WP_Customize_Control' ) )
                         <?php
                             foreach ( $this->fonts as $k => $v )
                             {
-                                printf('<option value="%s" %s>%s</option>', $k, selected($this->value(), $k, false), $v->family);
+                                printf('<option value="%s" %s>%s</option>', $v->family, selected($this->value(), $k, false), $v->family);
                             }
                         ?>
                     </select>
