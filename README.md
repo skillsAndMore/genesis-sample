@@ -1,6 +1,6 @@
 # Modifica di Genesis Sample Theme con inclusione Controlli Personalizzati
 
-Link articolo:
+Link articolo: http://wpandmore.info/aggiungi-controlli-theme-customizer/
 
 Nell'articolo appena collegato abbiamo descritto come sia possibile aggiungere dei controlli personalizzati all'interno delle [Theme Customizer API](http://wpandmore.info/personalizzare-tema-customizer/) di WordPress che ci permettono di offrire dei controlli di personalizzazione del tema ai nostri utenti.
 
